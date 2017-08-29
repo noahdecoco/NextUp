@@ -19,7 +19,7 @@ class Map extends Component {
 
     render() {
         return (
-            <div className="map" ref="map"></div>
+            <div className="map-container" ref="map"></div>
         );
     }
 }
