@@ -11,15 +11,18 @@ class EventsIndex extends Component {
                     <h1>Next up!</h1>
                 </div>
                 <ul>
-                    <li>Event 1</li>
-                    <li>Event 2</li>
-                    <li>Event 3</li>
-                    <li>Event 4</li>
+                    { this.renderEvents() }
                 </ul>
             </div>
         );
     }
-    
+
+    renderEvents() {
+        return this.props.events.map((event) => {
+            return (<li key={ event.id }>{ event.title }</li>)
+        })
+    }
+
 }
 
 export default EventsIndex;

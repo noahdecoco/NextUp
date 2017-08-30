@@ -1,0 +1,22 @@
+[
+    {
+        "id": "event_id_1",
+        "title": "Open Mic",
+        "time": "20:00",
+        "venue": "Café de koe",
+        "coords": {
+            "lat": 52.36578189999999,
+            "lon": 4.880202999999938
+        }
+    },
+    {
+        "id": "event_id_2",
+        "title": "Event 1",
+        "time": "20:00",
+        "venue": "Allard Pierson Museum",
+        "coords": {
+            "lat": "52.368724",
+            "lon": " 4.89972"
+        }
+    }
+]
