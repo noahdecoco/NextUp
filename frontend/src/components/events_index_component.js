@@ -18,8 +18,8 @@ class EventsIndex extends Component {
     }
 
     renderEvents() {
-        return this.props.events.map((event) => {
-            return (<li key={ event.id }>{ event.title }</li>)
+        return this.props.events.map((event, index) => {
+            return (<li key={ index }>{ event.title }</li>)
         })
     }
 

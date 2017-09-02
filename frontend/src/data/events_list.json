@@ -1,22 +1,72 @@
 [
-    {
-        "id": "event_id_1",
-        "title": "Open Mic",
-        "time": "20:00",
-        "venue": "Café de koe",
-        "coords": {
-            "lat": 52.36578189999999,
-            "lon": 4.880202999999938
-        }
-    },
-    {
-        "id": "event_id_2",
-        "title": "Event 1",
-        "time": "20:00",
-        "venue": "Allard Pierson Museum",
-        "coords": {
-            "lat": "52.368724",
-            "lon": " 4.89972"
-        }
+  {
+    "title": "Toneelgroep Amsterdam – Medea",
+    "time": "20.00 uur",
+    "ticketLink": "http://last-minute-ticket-shop.pink-tie.com/toneelgroep-amsterdam-medea-2-september-2017/reserve-tickets",
+    "location": "Stadsschouwburg Amsterdam",
+    "coords": {
+      "lat": 52.36420039999999,
+      "lng": 4.8819639
     }
+  },
+  {
+    "title": "Best Of Boom: Summer Improv Party",
+    "time": "20.00 uur",
+    "ticketLink": "http://last-minute-ticket-shop.pink-tie.com/best-of-boom-summer-improv-party-2-september-2017/reserve-tickets",
+    "location": "Rozentheater",
+    "coords": {
+      "lat": 52.3726275,
+      "lng": 4.879141
+    }
+  },
+  {
+    "title": "Old Roots & New Routes: Monir Goran Trio & Baban Kirkuki",
+    "time": "20.15 uur",
+    "ticketLink": "http://last-minute-ticket-shop.pink-tie.com/old-roots-new-routes-monir-goran-trio-baban-kirkuki-2-september-2017/reserve-tickets",
+    "location": "Amstelkerk",
+    "coords": {
+      "lat": 52.3623071,
+      "lng": 4.896665899999999
+    }
+  },
+  {
+    "title": "Letter to My Newborn Daughter",
+    "time": "20.30 uur",
+    "ticketLink": "http://last-minute-ticket-shop.pink-tie.com/letter-to-my-newborn-daughter-2-september-2017/reserve-tickets",
+    "location": "Café Belcampo in De Hallen Amsterdam",
+    "coords": {
+      "lat": 52.36698269999999,
+      "lng": 4.8688695
+    }
+  },
+  {
+    "title": "Stand-up Comedy Show",
+    "time": "20.30 uur",
+    "ticketLink": "http://last-minute-ticket-shop.pink-tie.com/stand-up-comedy-show-2-september-2017/reserve-tickets",
+    "location": "Comedy Café",
+    "coords": {
+      "lat": 43.0437468,
+      "lng": -87.91490619999999
+    }
+  },
+  {
+    "title": "Shot Of Improv",
+    "time": "22.30 uur",
+    "ticketLink": "http://last-minute-ticket-shop.pink-tie.com/shot-of-improv-2-september-2017/reserve-tickets",
+    "location": "Rozentheater",
+    "coords": {
+      "lat": 52.3726275,
+      "lng": 4.879141
+    }
+  },
+  {
+    "title": "Late Night Comedytrain",
+    "time": "23.59 uur",
+    "ticketLink": "http://last-minute-ticket-shop.pink-tie.com/late-night-comedytrain-2-september-2017/reserve-tickets",
+    "location": "Toomler",
+    "coords": {
+      "lat": 52.3514487,
+      "lng": 4.872885
+    }
+  }
 ]

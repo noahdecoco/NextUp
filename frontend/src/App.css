@@ -18,7 +18,7 @@ html, body {
     top: 0;
     left: 0;
     width: 100vw;
-    height: 100vh;
+    height: calc(100vh + 50px);
 }
 
 .events-index-container {
@@ -37,4 +37,12 @@ html, body {
     padding: 15px 30px;
     color: #888;
     border-bottom: 2px solid #272727;
+}
+
+.map-label {
+  text-shadow: 1px 1px 5px #000;
+  color: #888;
+  width: 160px;
+  transform: translateX(-80px);
+  text-align: center;
 }
