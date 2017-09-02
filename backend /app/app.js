@@ -12,49 +12,6 @@ const pageToVisit = 'http://lastminuteticketshop.nl/';
 const url = new URL(pageToVisit);
 const baseUrl = url.protocol + "//" + url.hostname;
 
-let items = [{}, {}, {}];
-
-// let doit = (items) => {
-//
-// 	console.log('doing it');
-//
-// 	return new Promise((resolve, reject) => {
-//
-// 		for (var i = 0; i < items.length; i++) {
-// 			items[i].id = i;
-// 		}
-//
-// 		return Promise.all(items.map(anothePromise)).then((result) => {
-//
-// 			resolve(result);
-//
-// 		});
-//
-//
-// 	});
-//
-// };
-//
-// let anothePromise = (item) => {
-//
-// 	console.log(item);
-// 	return new Promise((resolve, reject) => {
-//
-// 		item.coods = 'lala';
-// 		console.log('resolved again');
-// 		resolve(item);
-//
-// 	});
-//
-// }
-//
-// doit(items).then((result) => {
-//
-// 	console.log('done', items);
-//
-// });
-
-
 let fetchEvents = () => {
 
 	return new Promise((resolve, reject) => {
@@ -89,7 +46,7 @@ let deriveEventCoords = (event) => {
 
 		var location = encodeURI(event.location);
 
-		request.get(`http://maps.google.com/maps/api/geocode/json?address=${location}`, (error, response, body) => {
+		request.get(`http://maps.google.com/maps/api/geocode/json?address=${location},Amsterdam`, (error, response, body) => {
 
 			var results = JSON.parse(body);
 			event.coords = results.results[0].geometry.location;

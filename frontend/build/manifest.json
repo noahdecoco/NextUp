@@ -1,6 +1,6 @@
 {
-  "short_name": "Next Up",
-  "name": "Next Up: What's happening around you today",
+  "short_name": "React App",
+  "name": "Create React App Sample",
   "icons": [
     {
       "src": "favicon.ico",

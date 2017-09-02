@@ -1,7 +1,7 @@
 {
     "center": {
-        "lat": 52.3681548,
-        "lng": 4.8806762
+        "lat": 52.367,
+        "lng": 4.89
     },
     "zoom": 14,
     "disableDefaultUI": true,
@@ -10,6 +10,9 @@
             "featureType": "all",
             "elementType": "labels.text.fill",
             "stylers": [
+                {
+                    "visibility": "off"
+                },
                 {
                     "saturation": 36
                 },
@@ -26,7 +29,7 @@
             "elementType": "labels.text.stroke",
             "stylers": [
                 {
-                    "visibility": "on"
+                    "visibility": "off"
                 },
                 {
                     "color": "#000000"

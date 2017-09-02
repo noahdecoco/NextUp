@@ -42,7 +42,18 @@ html, body {
 .map-label {
   text-shadow: 1px 1px 5px #000;
   color: #888;
-  width: 160px;
-  transform: translateX(-80px);
+  width: 140px;
+  transform: translate(-70px, 0px);
   text-align: center;
 }
+
+/*.map-label::before {
+  content: '';
+  display: block;
+  width: 20px;
+  height: 20px;
+  background: rgba(88, 88, 88, 0.5);
+  border: 1px solid #888;
+  margin: auto;
+  border-radius: 50%;
+}*/
