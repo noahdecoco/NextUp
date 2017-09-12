@@ -57,13 +57,40 @@ class Map extends Component {
 					event.coords.lng
 				);
 
-				new MarkerWithLabel({
+				var marker = new google.maps.Marker({
 					position: coords,
 					map: this.map,
-					labelContent: `${event.title}<br>- - -<br>${event.location} @ ${event.time}`,
-					labelClass: "map-label",
-					icon: "../assets/event-marker.svg"
+					label: { text: event.title, color: "#888" },
+					icon: "null"
 				});
+
+				var contentString = `<div>
+                    <h1>${event.title}</h1>
+                    <p>${event.location} @ ${event.time}</p>
+                    <p>${event.intro}</p>
+                    <a href="${event.readmoreLink}" target="_blank">More information</a>
+                </div>`;
+
+				var infowindow = new google.maps.InfoWindow({
+					content: contentString,
+                    maxWidth: 200
+				});
+
+				marker.addListener("click", () => {
+					infowindow.open(this.map, marker);
+				});
+
+				marker.addListener("mouseout", () => {
+					// infowindow.close(this.map, marker);
+				});
+
+				// new MarkerWithLabel({
+				// 	position: coords,
+				// 	map: this.map,
+				// 	labelContent: `${event.title}<br>- - -<br>${event.location} @ ${event.time}`,
+				// 	labelClass: "map-label",
+				// 	icon: "../assets/event-marker.svg"
+				// });
 			}
 		});
 	}
