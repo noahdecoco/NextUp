@@ -57,11 +57,19 @@ class Map extends Component {
 					event.coords.lng
 				);
 
-				var marker = new google.maps.Marker({
+				// var marker = new google.maps.Marker({
+				// 	position: coords,
+				// 	map: this.map,
+				// 	label: { text: event.title, color: "#888" },
+				// 	icon: "null"
+				// });
+
+				var marker = new MarkerWithLabel({
 					position: coords,
 					map: this.map,
-					label: { text: event.title, color: "#888" },
-					icon: "null"
+					labelContent: `${event.title}`,
+					labelClass: "map-label",
+					icon: "../assets/event-marker.svg"
 				});
 
 				var contentString = `<div>
@@ -84,13 +92,7 @@ class Map extends Component {
 					// infowindow.close(this.map, marker);
 				});
 
-				// new MarkerWithLabel({
-				// 	position: coords,
-				// 	map: this.map,
-				// 	labelContent: `${event.title}<br>- - -<br>${event.location} @ ${event.time}`,
-				// 	labelClass: "map-label",
-				// 	icon: "../assets/event-marker.svg"
-				// });
+
 			}
 		});
 	}
