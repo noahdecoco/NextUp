@@ -1,2 +1,19 @@
-body {
-  opacity: 0.1; }
+.event-marker {
+  width: 140px;
+  transform: translate(-70px, -100%);
+  text-align: center; }
+
+.event-marker__icon {
+  display: block;
+  margin: auto;
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border: 1px solid #333;
+  border-radius: 50%; }
+
+.event-marker__label {
+  display: block;
+  color: #888;
+  text-shadow: 1px 1px 5px #000;
+  margin-bottom: 6px; }

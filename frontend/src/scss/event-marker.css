@@ -1,0 +1,43 @@
+.event-marker {
+  width: 140px;
+  transform: translate(-70px, -100%);
+  text-align: center; }
+
+.event-marker__icon {
+  display: block;
+  margin: auto;
+  width: 8px;
+  height: 8px;
+  background: #ccc;
+  border: 1px solid #333;
+  border-radius: 50%;
+  animation: fade-in 1s ease-out; }
+
+.event-marker__location {
+  display: block;
+  color: #888;
+  font-size: 12px;
+  text-shadow: 1px 1px 5px #000;
+  margin-bottom: 2px;
+  animation: fade-in-up 0.5s ease-out; }
+
+.event-marker__time {
+  display: block;
+  color: #888;
+  text-shadow: 1px 1px 5px #000;
+  margin-bottom: 6px;
+  animation: fade-in-up 0.5s ease-out; }
+
+@keyframes fade-in {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(10px); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } }

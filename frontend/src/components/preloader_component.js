@@ -15,9 +15,9 @@ class EventsIndex extends Component {
 
 	render() {
 		return (
-			<div className="spinner">
-				<div className="double-bounce1" />
-				<div className="double-bounce2" />
+			<div className="preloader">
+				<div className="preloader__circle-1" />
+				<div className="preloader__circle-2" />
 			</div>
 		);
 	}
