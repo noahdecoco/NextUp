@@ -7,9 +7,11 @@ class Message extends Component {
 
 	render() {
 		return (
-			<div className="message-box">
-				<p className="message-box__title">No events today</p>
-                <p className="message-box__message">Please check tomorrow</p>
+			<div className="message-modal">
+				<div>
+					<p className="message-modal__title">We couldn't find any events for today</p>
+                	<p className="message-modal__message">Please comeback tomorrow</p>
+				</div>
 			</div>
 		);
 	}

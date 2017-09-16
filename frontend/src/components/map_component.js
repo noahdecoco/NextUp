@@ -15,7 +15,7 @@ class Map extends Component {
 	}
 
 	render() {
-		return <div className="map-container" ref="map" />;
+		return <div className="event-map" ref="map" />;
 	}
 
 	componentDidMount() {
@@ -71,12 +71,8 @@ class Map extends Component {
 					icon: "../assets/event-marker.svg"
 				});
 
-				marker.addListener("click", () => {
-					// infowindow.open(this.map, marker);
-				});
-
-				marker.addListener("mouseout", () => {
-					// infowindow.close(this.map, marker);
+				marker.addListener("click", (evt) => {
+					window.open(event.readmoreLink);
 				});
 			}
 		});

@@ -1,13 +1,15 @@
-@import './scss/preloader.scss';
-@import './scss/event-marker.scss';
-
-
 /*
-
 Made with http://www.colourco.de/
 theme: #0e2427, #1b474d, #276a74, #338e9b, #3fb2c2
-
 */
+
+@import './scss/preloader.scss';
+@import './scss/event-marker.scss';
+@import './scss/events-index.scss';
+@import './scss/events-item.scss';
+@import './scss/event-map.scss';
+@import './scss/message-modal.scss';
+@import './scss/button-toggle-show.scss';
 
 html, body {
     margin: 0;
@@ -17,51 +19,11 @@ html, body {
     overflow: hidden;
 }
 
-.map-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: calc(100vh + 50px);
-}
-
-.events-index-container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 360px;
-    height: 100vh;
-    background: #2e2e2e;
-    overflow: auto;
-    box-sizing: border-box;
-    border-right: 2px solid #272727;
-}
-
-.events-index__header {
-    padding: 15px 30px;
-    color: #888;
-    border-bottom: 2px solid #272727;
-}
-
-
 .app-title {
     position: absolute;
     top: 20px;
     left: 20px;
     font-size: 14px;
-    color: #888;
-    text-shadow: 1px 1px 5px #000;
-}
-
-.message-box {
-    position: absolute;
-    width: 200px;
-    height: 160px;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
     color: #888;
     text-shadow: 1px 1px 5px #000;
 }

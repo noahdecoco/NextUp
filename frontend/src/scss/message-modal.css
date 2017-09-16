@@ -1,0 +1,16 @@
+.message-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 400px;
+  height: 160px;
+  margin: auto;
+  color: #666;
+  text-align: center;
+  background: #222222;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6); }

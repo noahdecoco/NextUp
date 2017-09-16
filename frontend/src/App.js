@@ -7,7 +7,7 @@ import Preloader from "./components/preloader_component";
 import Message from "./components/message_component";
 import Map from "./components/map_component";
 
-// import EventsIndex from "./components/events_index_component";
+import EventsIndex from "./components/events_index_component";
 
 class App extends Component {
 	constructor(props) {
@@ -15,8 +15,8 @@ class App extends Component {
 
 		this.state = {
 			events: [],
-            showPreloader: true,
-            showMessage: false
+			hasLoaded: false,
+			hasEvents: false
 		};
 
 		this.fetchEvents();
@@ -26,10 +26,10 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Map events={this.state.events} />
-				{this.state.showPreloader && <Preloader />}
-				{this.state.showMessage && <Message />}
-                <h1 className="app-title">Nextup in Amsterdam</h1>
-				{/* <EventsIndex events={ this.state.events }/> */}
+				{!this.state.hasLoaded && <Preloader />}
+				{!this.state.hasEvents && this.state.hasLoaded && <Message />}
+				<h1 className="app-title">Nextup in Amsterdam</h1>
+				{this.state.hasEvents && <EventsIndex events={this.state.events} />}
 			</div>
 		);
 	}
@@ -40,8 +40,8 @@ class App extends Component {
 			.then(response => {
 				this.setState({
 					events: response.data,
-					showPreloader: false,
-                    showMessage: response.data.length > 0 ? false : true
+					hasLoaded: true,
+					hasEvents: response.data.length > 0 ? true : false
 				});
 			})
 			.catch(function(error) {
