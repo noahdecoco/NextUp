@@ -1,53 +1,42 @@
 import React, { Component } from "react";
-import axios from "axios";
-
-import "./App.css";
+import { fetchEvents } from "./actions";
+import { connect } from "react-redux";
 
 import Preloader from "./components/preloader_component";
 import Message from "./components/message_component";
 import Map from "./components/map_component";
+import EventsList from "./components/events_list_component";
 
-import EventsIndex from "./components/events_index_component";
+import "./App.css";
 
 class App extends Component {
-	constructor(props) {
-		super(props);
-
-		this.state = {
-			events: [],
-			hasLoaded: false,
-			hasEvents: false
-		};
-
-		this.fetchEvents();
+	componentDidMount() {
+		this.props.fetchEvents(this.onFetchHandler.bind(this));
 	}
 
 	render() {
+		console.log("render app", this.props);
 		return (
 			<div className="App">
-				<Map events={this.state.events} />
-				{!this.state.hasLoaded && <Preloader />}
-				{!this.state.hasEvents && this.state.hasLoaded && <Message />}
-				<h1 className="app-title">Nextup in Amsterdam</h1>
-				{this.state.hasEvents && <EventsIndex events={this.state.events} />}
+				<Map />
+				{/* {!this.state.hasLoaded && <Preloader />} */}
+				{/* {!this.state.hasEvents && this.state.hasLoaded && <Message />} */}
+				<div className="app-title">
+					<h1>Nextup in Amsterdam</h1>
+					<p>This is the time.</p>
+				</div>
+				<EventsList />}
 			</div>
 		);
 	}
 
-	fetchEvents() {
-		axios
-			.get("http://noahdecoco.com/nextup/api/events")
-			.then(response => {
-				this.setState({
-					events: response.data,
-					hasLoaded: true,
-					hasEvents: response.data.length > 0 ? true : false
-				});
-			})
-			.catch(function(error) {
-				console.error(error);
-			});
+	onFetchHandler() {
+		console.log("fetch complete");
 	}
 }
 
-export default App;
+function mapStateToProps({ events }) {
+	return { events };
+}
+
+export default connect(mapStateToProps, { fetchEvents })(App);

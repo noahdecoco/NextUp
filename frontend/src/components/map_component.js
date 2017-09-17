@@ -1,9 +1,10 @@
 import _ from "lodash";
 import React, { Component } from "react";
 import MapOptions from "../data/map_options.json";
+import { connect } from "react-redux";
 
 const google = window.google;
-var MarkerWithLabel = require("markerwithlabel")(google.maps);
+const MarkerWithLabel = require("markerwithlabel")(google.maps);
 
 class Map extends Component {
 	constructor(props) {
@@ -49,7 +50,7 @@ class Map extends Component {
 		var locations = [];
 
 		_.each(this.state.events, event => {
-			if (locations.indexOf(event.location) == -1) {
+			if (locations.indexOf(event.location) === -1) {
 				locations.push(event.location);
 
 				coords = new google.maps.LatLng(
@@ -71,7 +72,7 @@ class Map extends Component {
 					icon: "../assets/event-marker.svg"
 				});
 
-				marker.addListener("click", (evt) => {
+				marker.addListener("click", evt => {
 					window.open(event.readmoreLink);
 				});
 			}
@@ -79,4 +80,10 @@ class Map extends Component {
 	}
 }
 
-export default Map;
+function mapStateToProps({ events }) {
+	return {
+		events
+	};
+}
+
+export default connect(mapStateToProps, null)(Map);

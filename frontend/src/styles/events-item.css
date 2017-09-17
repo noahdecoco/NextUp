@@ -1,7 +1,10 @@
 .event-item {
   display: block;
   color: #666;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: color 0.3s ease-out; }
+  .event-item:hover {
+    color: #999; }
 
 .event-item__title {
   font-size: 16px;

@@ -5,11 +5,12 @@
     width: 360px;
     height: 100vh;
     background: rgba(#222, 1);
-    // overflow-y: scroll;
     box-sizing: border-box;
-    border-left: 1px solid #181818;
+    // border-left: 1px solid #181818;
 
-    transform: translateX(100%);
+    // transform: translateX(100%);
+
+    box-shadow: -10px 5px 15px rgba(#000, 0.3);
 
     transition: transform 0.4s ease-in-out;
 
@@ -24,6 +25,7 @@
     left: 0;
     transform: translateX(-100%);
     border-right: 1px solid #181818;
+    box-shadow: -10px 5px 15px rgba(#000, 0.3);
 }
 
 .events-index__list {

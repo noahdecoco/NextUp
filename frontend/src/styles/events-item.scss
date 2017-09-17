@@ -2,6 +2,10 @@
 	display: block;
 	color: #666;
 	text-decoration: none;
+	transition: color 0.3s ease-out;
+	&:hover {
+		color: #999;
+	}
 }
 
 .event-item__title {

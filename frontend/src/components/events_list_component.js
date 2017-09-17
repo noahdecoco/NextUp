@@ -1,29 +1,20 @@
 import React, { Component } from "react";
+import ButtonList from "./button_list_component";
+import { connect } from "react-redux";
 
-class EventsIndex extends Component {
-	constructor(props) {
-		super(props);
-	}
-
+class EventsList extends Component {
 	render() {
 		return (
 			<div className="events-index" ref="eventsIndex">
-				<button
-					className="events-index__button-toggle-show button-toggle-show"
-					onClick={this.onToggleShowClick.bind(this)}
-				>
-					<div>
-						<span className="button-toggle-show__line"></span>
-						<span className="button-toggle-show__line"></span>
-						<span className="button-toggle-show__line"></span>
-					</div>
-				</button>
+				<ButtonList clickHandler={this.onToggleShowClick.bind(this)} />
 				<ul className="events-index__list">{this.renderEvents()}</ul>
 			</div>
 		);
 	}
 
 	renderEvents() {
+		console.log(this.props);
+		if (this.props.events) return;
 		return this.props.events.map((event, index) => {
 			return (
 				<li className="events-index__list-item" key={index}>
@@ -43,9 +34,14 @@ class EventsIndex extends Component {
 	}
 
 	onToggleShowClick() {
-		console.log("fds", this.refs.eventsIndex);
 		this.refs.eventsIndex.classList.toggle("events-index--is-open");
 	}
 }
 
-export default EventsIndex;
+function mapStateToProps({ events }) {
+	return {
+		events
+	};
+}
+
+export default connect(mapStateToProps, null)(EventsList);

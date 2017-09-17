@@ -3,27 +3,29 @@ Made with http://www.colourco.de/
 theme: #0e2427, #1b474d, #276a74, #338e9b, #3fb2c2
 */
 
-@import './scss/preloader.scss';
-@import './scss/event-marker.scss';
-@import './scss/events-index.scss';
-@import './scss/events-item.scss';
-@import './scss/event-map.scss';
-@import './scss/message-modal.scss';
-@import './scss/button-toggle-show.scss';
+@import "./styles/preloader.scss";
+@import "./styles/event-marker.scss";
+@import "./styles/events-index.scss";
+@import "./styles/events-item.scss";
+@import "./styles/event-map.scss";
+@import "./styles/message-modal.scss";
+@import "./styles/button-toggle-show.scss";
 
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-    height: 100vh;
-    overflow: hidden;
+html,
+body {
+	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	overflow: hidden;
+	font-family: sans-serif;
 }
 
 .app-title {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 14px;
-    color: #888;
-    text-shadow: 1px 1px 5px #000;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+	font-size: 14px;
+	color: #888;
+	text-shadow: 1px 1px 5px #000;
 }

@@ -1,28 +1,31 @@
 {
-    "name": "next-up",
-    "version": "0.1.0",
-    "private": true,
-    "dependencies": {
-        "axios": "^0.16.2",
-        "lodash": "^4.17.4",
-        "markerwithlabel": "^2.0.1",
-        "node-sass-chokidar": "0.0.3",
-        "npm-run-all": "^4.1.1",
-        "react": "^15.6.1",
-        "react-dom": "^15.6.1",
-        "react-scripts": "1.0.11"
-    },
-    "scripts": {
-        "build-css": "node-sass-chokidar src/ -o src/",
-        "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
-        "start-js": "react-scripts start",
-        "start": "npm-run-all -p watch-css start-js",
-        "build": "npm run build-css && react-scripts build",
-        "test": "react-scripts test --env=jsdom",
-        "eject": "react-scripts eject"
-    },
-    "devDependencies": {
-        "markerwithlabel": "^2.0.1"
-    },
-    "homepage": "http://noahdecoco.com/nextup/"
+  "name": "next-up",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "axios": "^0.16.2",
+    "lodash": "^4.17.4",
+    "markerwithlabel": "^2.0.1",
+    "node-sass-chokidar": "0.0.3",
+    "npm-run-all": "^4.1.1",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "react-redux": "^5.0.6",
+    "react-scripts": "1.0.11",
+    "redux": "^3.7.2",
+    "redux-promise": "^0.5.3"
+  },
+  "scripts": {
+    "build-css": "node-sass-chokidar src/ -o src/",
+    "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+    "start-js": "react-scripts start",
+    "start": "npm-run-all -p watch-css start-js",
+    "build": "npm run build-css && react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {
+    "markerwithlabel": "^2.0.1"
+  },
+  "homepage": "http://noahdecoco.com/nextup/"
 }
