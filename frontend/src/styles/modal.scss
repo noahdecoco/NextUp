@@ -1,0 +1,30 @@
+.modal {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.modal__backdrop {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+
+	background: rgba(#000, 0.8);
+}
+
+.modal__content {
+	width: 600px;
+	height: 380px;
+	box-sizing: border-box;
+	background: rgba(#222, 1);
+
+	padding: 20px;
+}

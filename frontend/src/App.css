@@ -225,6 +225,31 @@ theme: #0e2427, #1b474d, #276a74, #338e9b, #3fb2c2
   margin-top: 6px;
   text-shadow: 1px 1px 5px #000; }
 
+.modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh; }
+
+.modal__backdrop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.8); }
+
+.modal__content {
+  width: 600px;
+  height: 380px;
+  box-sizing: border-box;
+  background: #222222;
+  padding: 20px; }
+
 html,
 body {
   margin: 0;
