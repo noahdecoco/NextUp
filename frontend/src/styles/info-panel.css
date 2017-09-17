@@ -1,0 +1,13 @@
+.info-panel {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 14px;
+  color: #888; }
+
+.info-panel__title {
+  font-size: 20px;
+  text-shadow: 1px 1px 5px #000; }
+
+.info-panel__body {
+  text-shadow: 1px 1px 5px #000; }

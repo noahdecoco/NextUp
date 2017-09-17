@@ -10,28 +10,37 @@ import EventsList from "./components/events_list_component";
 import "./App.css";
 
 class App extends Component {
+	constructor(props) {
+		super(props);
+
+		this.state = {
+			hasLoaded: false
+		};
+	}
+
 	componentDidMount() {
 		this.props.fetchEvents(this.onFetchHandler.bind(this));
 	}
 
 	render() {
-		console.log("render app", this.props);
 		return (
 			<div className="App">
 				<Map />
-				{/* {!this.state.hasLoaded && <Preloader />} */}
-				{/* {!this.state.hasEvents && this.state.hasLoaded && <Message />} */}
-				<div className="app-title">
-					<h1>Nextup in Amsterdam</h1>
-					<p>This is the time.</p>
+				{!this.state.hasLoaded && <Preloader />}
+				{this.state.hasLoaded && this.props.events.length === 0 && <Message />}
+				<div className="info-panel">
+					<h1 className="info-panel__title">Nextup in Amsterdam</h1>
+					<p className="info-panel__body">Events happening around Amsterdam today.</p>
 				</div>
-				<EventsList />}
+				<EventsList />
 			</div>
 		);
 	}
 
 	onFetchHandler() {
-		console.log("fetch complete");
+		this.setState({
+			hasLoaded: true
+		});
 	}
 }
 

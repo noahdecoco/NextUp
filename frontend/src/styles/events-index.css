@@ -2,10 +2,11 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 360px;
+  width: calc(100vw - 50px);
+  max-width: 320px;
   height: 100vh;
   background: #222222;
-  box-sizing: border-box;
+  transform: translateX(100%);
   box-shadow: -10px 5px 15px rgba(0, 0, 0, 0.3);
   transition: transform 0.4s ease-in-out; }
   .events-index--is-open {

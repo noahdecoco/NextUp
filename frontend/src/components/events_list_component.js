@@ -13,8 +13,8 @@ class EventsList extends Component {
 	}
 
 	renderEvents() {
-		console.log(this.props);
-		if (this.props.events) return;
+		if (!this.props.events.length) return;
+
 		return this.props.events.map((event, index) => {
 			return (
 				<li className="events-index__list-item" key={index}>

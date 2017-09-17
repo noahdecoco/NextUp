@@ -7,8 +7,8 @@ export const SELECT_EVENT = "SELECT_EVENT";
 
 export function fetchEvents(callback) {
 	const request = axios.get(API_URL).then(res => {
-		console.log("get success", res);
 		callback();
+		return res;
 	});
 
 	return {
