@@ -16,7 +16,8 @@ class App extends Component {
 		super(props);
 
 		this.state = {
-			hasLoaded: false
+			hasLoaded: false,
+			selectedEvent: {}
 		};
 	}
 
@@ -29,18 +30,17 @@ class App extends Component {
 			<div className="App">
 				<Map />
 				{!this.state.hasLoaded && <Preloader />}
-				<Modal>
-					<div className="modal__backdrop">
-						<div className="modal__content">
-							<h1>I is modal</h1>
-							<h1>I is modal</h1>
-							<h1>I is modal</h1>
-						</div>
-					</div>
-				</Modal>
 				{this.state.hasLoaded && this.props.events.length === 0 && <Message />}
 				<InfoPanel />
 				<EventsList />
+				{/* <Modal>
+					<div className="modal__backdrop">
+						<div className="modal__content">
+							<h2>{this.state.selectedEvent.title}</h2>
+							<p>{this.state.selectedEvent.location}</p>
+						</div>
+					</div>
+				</Modal> */}
 			</div>
 		);
 	}
