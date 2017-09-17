@@ -34,11 +34,7 @@ class Map extends Component {
 	}
 
 	componentWillReceiveProps(nextProps) {
-		if (
-			JSON.stringify(this.props.events) ===
-			JSON.stringify(nextProps.events)
-		)
-			return;
+		if (JSON.stringify(this.props.events) === JSON.stringify(nextProps.events)) return;
 
 		this.setState({
 			events: nextProps.events
@@ -53,10 +49,7 @@ class Map extends Component {
 			if (locations.indexOf(event.location) === -1) {
 				locations.push(event.location);
 
-				coords = new google.maps.LatLng(
-					event.coords.lat,
-					event.coords.lng
-				);
+				coords = new google.maps.LatLng(event.coords.lat, event.coords.lng);
 
 				var markerLabel = `<div>
 					<span class="event-marker__location">${event.location}</span>
@@ -72,11 +65,16 @@ class Map extends Component {
 					icon: "../assets/event-marker.svg"
 				});
 
-				marker.addListener("click", evt => {
-					window.open(event.readmoreLink);
+				marker.addListener("click", () => {
+					this.onMarkerClick(event);
 				});
 			}
 		});
+	}
+
+	onMarkerClick(event) {
+		console.log("show modal", event);
+		// window.open(event.readmoreLink);
 	}
 }
 

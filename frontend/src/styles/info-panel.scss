@@ -1,6 +1,6 @@
 .info-panel {
 	position: absolute;
-	top: 20px;
+	top: 40px;
 	left: 20px;
 	font-size: 14px;
 	color: #888;
@@ -8,9 +8,12 @@
 
 .info-panel__title {
 	font-size: 20px;
+	margin: 0;
 	text-shadow: 1px 1px 5px #000;
 }
 
 .info-panel__body {
+	font-size: 12px;
+	margin-top: 6px;
 	text-shadow: 1px 1px 5px #000;
 }

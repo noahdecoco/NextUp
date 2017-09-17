@@ -6,6 +6,7 @@ import Preloader from "./components/preloader_component";
 import Message from "./components/message_component";
 import Map from "./components/map_component";
 import EventsList from "./components/events_list_component";
+import InfoPanel from "./components/info_panel_component";
 
 import "./App.css";
 
@@ -28,10 +29,7 @@ class App extends Component {
 				<Map />
 				{!this.state.hasLoaded && <Preloader />}
 				{this.state.hasLoaded && this.props.events.length === 0 && <Message />}
-				<div className="info-panel">
-					<h1 className="info-panel__title">Nextup in Amsterdam</h1>
-					<p className="info-panel__body">Events happening around Amsterdam today.</p>
-				</div>
+				<InfoPanel />
 				<EventsList />
 			</div>
 		);
