@@ -73,8 +73,8 @@ class Map extends Component {
 	}
 
 	onMarkerClick(event) {
-		console.log("show modal", event);
-		// window.open(event.readmoreLink);
+		console.log("todo: show modal", event);
+		window.open(event.readmoreLink);
 	}
 }
 
