@@ -1,3 +1,5 @@
+"use strict";
+
 // Modules
 const axios = require('axios');
 const express = require('express')
@@ -10,7 +12,6 @@ const URL = require('url-parse');
 const app = express()
 const pageToVisit = 'http://lastminuteticketshop.nl/';
 const url = new URL(pageToVisit);
-const baseUrl = url.protocol + "//" + url.hostname;
 
 let fetchEvents = () => {
 
@@ -26,7 +27,9 @@ let fetchEvents = () => {
 					title: $(b).find('.text-container h1 a').text(),
 					time: $(b).find('.time').text(),
 					ticketLink: $(b).find('.btn-buy').attr('href'),
-					location: $(b).find('.location').text()
+					intro: $(b).find('.intro').text().trim(),
+					location: $(b).find('.location').text(),
+					readmoreLink: $(b).find('.read-more').attr('href')
 				})
 			});
 
@@ -46,7 +49,7 @@ let deriveEventCoords = (event) => {
 
 		var location = encodeURI(event.location);
 
-		request.get(`http://maps.google.com/maps/api/geocode/json?address=${location},Amsterdam`, (error, response, body) => {
+		request.get(`http://maps.google.com/maps/api/geocode/json?address=${location},amsterdam,netherlands`, (error, response, body) => {
 
 			var results = JSON.parse(body);
 			event.coords = results.results[0].geometry.location;
@@ -59,16 +62,13 @@ let deriveEventCoords = (event) => {
 };
 
 // Routes
-app.get('/api/events', function (req, res) {
+app.get('/nextup/api/events', function (req, res) {
 
 	res.header('Access-Control-Allow-Origin', '*');
 	res.header('Access-Control-Allow-Headers', 'X-Requested-With');
 
 	fetchEvents().then((results) => {
-
-		console.log('results', results);
 		res.send(results);
-
 	});
 
 });
